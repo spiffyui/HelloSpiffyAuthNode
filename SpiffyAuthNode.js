@@ -58,12 +58,12 @@ var server = http.createServer(function(request, response) {
             		 * Return the unauthenticated NCAC Fault and include the header for authentication
             		 */
             		response.writeHeader(401, {'Content-Type': 'application/json', 
-            			'WWW-Authenticate': 'X-OPAQUE uri="http://localhost:8181/auth", signOffUri=""'});  
+            			'WWW-Authenticate': 'X-OPAQUE uri="http://localhost:' + port + authUri +'", signOffUri=""'});  
             		var ncacFault = {'Fault': {'Code': {'Value': 'Sender', 'Subcode': {'Value': 'NoAuthHeader'}}, 'Reason': {'Text':''}}};
             		response.end(JSON.stringify(ncacFault)); 
             		return;
             	}
-            } else if (uri == authUri) {
+            } else if (uri === authUri) {
             	if (request.method === 'POST') {
                 	/*
                 	 * Any username and password combination is fine, return the token, which is just the timestamp
