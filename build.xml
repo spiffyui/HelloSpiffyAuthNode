@@ -119,7 +119,7 @@
 
         To start Spiffy Auth Node, use the command
 
-        &lt;NODE_HOME&gt;/node SpiffyAuthNode.js
+        &lt;NODE_HOME&gt;/node HelloSpiffyAuthNode.js
 
         It will then provide instructions for accessing 
         the running application once the server is up.

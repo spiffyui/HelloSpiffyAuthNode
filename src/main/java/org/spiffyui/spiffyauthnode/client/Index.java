@@ -72,7 +72,7 @@ public class Index implements EntryPoint, ClickHandler, KeyPressHandler
          displays our title bar at the top of our page.
          */
         final MainHeader header = new MainHeader();
-        header.setHeaderTitle("Hello Spiffy SpiffyAuthNode!");
+        header.setHeaderTitle("Hello Spiffy Auth Node!");
         Anchor logout = new Anchor("Logout", "#");
         logout.getElement().setId("header_logout");
         header.setLogout(logout);
